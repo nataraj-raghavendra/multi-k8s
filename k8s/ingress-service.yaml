@@ -14,7 +14,7 @@ spec:
             - www.nataraj-raghavendra.me
           secretName: nataraj-raghavendra-me
     rules:
-        - host: nataraj-raghavendra.com
+        - host: nataraj-raghavendra.me
           http:
               paths:
                   - path: /
@@ -25,7 +25,7 @@ spec:
                     backend:
                         serviceName: server-cluster-ip-sevice
                         servicePort: 5000
-        - host: www.nataraj-raghavendra.com
+        - host: www.nataraj-raghavendra.me
           http:
               paths:
                   - path: /
