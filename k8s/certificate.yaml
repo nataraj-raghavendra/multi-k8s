@@ -1,0 +1,21 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+    name: nataraj-raghavendra-me-tls
+spec:
+    secretName: nataraj-raghavendra-me
+    issuerRef: 
+        name: letsencrypt-prod
+        kind: ClusterIssuer
+    commonName: nataraj-raghavendra.me
+    dnsNames:
+        - nataraj-raghavendra.me
+        - www.nataraj-raghavendra.me
+    acme:
+        config:
+            - http01:
+                ingressClass: nginx
+              domains:
+                - nataraj-raghavendra.me
+                - www.nataraj-raghavendra.me
+             
